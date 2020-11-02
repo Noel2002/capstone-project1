@@ -1,0 +1,155 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+    color:inherit
+}
+
+/*------------------------for all pages except landing page--------------------------------*/
+#nav-container{
+    width:100%;
+    background-color: #852270;
+    padding:initial;
+}
+#navigation{
+    padding: 20px 20px 10px; /* it has to be customised in mediaqueeries*/
+}
+
+/*--------------------------------------------------------*/
+
+#main-content{
+    padding: 30px 100px;
+}
+
+.section-header{
+    margin: 15px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-title{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.add-btn button{
+    padding: 5px 16px;
+    background-color: #852270;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+
+.articles-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.article{
+    flex-basis: 47%;
+    margin-top: 30px;
+}
+.article-img{
+    width: 100%;
+    height:280px;
+    overflow: hidden;
+}
+.article-img img{
+    width:100%;
+}
+
+.article-text{
+    padding: 10px;
+}
+.article-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.article-summary{
+    font-size: 20px;
+}
+
+.article-info{
+    margin: 10px 0px;
+}
+
+.user-avatar img{
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: -6px;
+    
+}
+
+
+
+
+
+
+@media only screen and (max-width: 798px){
+    .menu.responsive-nav .user-avatar{
+        display:none;
+    }
+    .menu ul li{
+        display: none;
+    }
+
+    #main-content{
+        padding: 20px 50px;
+    }
+
+
+    .section-header{
+        margin: 15px 0px;
+    }
+    .article-img{
+        height: 180px;
+    }
+   
+    .article-summary{
+        font-size: 18px;
+    }
+
+   
+}
+/*---------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:600px) {
+   .articles-area{
+       flex-direction: column;
+
+   }
+   .article-img{
+       height: 300px;
+   }
+   .article{
+       margin-top: 20px;
+   }
+}
+@media only screen and (max-width:465px) {
+    #main-content{
+        padding: 20px 30px;
+    }
+    .article-img{
+        height: 180px;
+    }
+   
+}
+@media only screen and (max-width:350px) {
+    #main-content{
+        padding: 20px 20px;
+    }
+     
+}
