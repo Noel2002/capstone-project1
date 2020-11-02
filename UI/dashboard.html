@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
+    <link rel="stylesheet" typetype="text/css" href="../CSS/dashboard.css">
+    <link rel="stylesheet" typetype="text/css" href="../CSS/footer.css">
+    <title>Dashboard</title>
+  </head>
+  <body>
+   <section id="nav-container">
+        <nav id="navigation" class="nav">
+            <div class="logo">
+                NOWO
+            </div>
+            <div class="menu" id="menu">
+                <ul> 
+                    <li class="burger-icon" onclick="dropNav()"><i class="fa fa-bars"></i></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="edit-profile.html">Profile</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="signIn.html">Logout</a></li>
+                    <li><a href="createBlog.html">Create blog</a></li>
+                    <li><a href="edit-blog.html">Edit blog</a></li>
+                    
+                                        
+                </ul>
+                <div class="user-avatar"><img src="../images/javascript.png" onclick="dropNav()"></div>
+            </div>
+
+        </nav>
+   </section>
+   <section id="main">
+        <div class="left-pane" id="left">
+            <li class="burger" onclick="closeSideNav()"><i class="fa fa-bars"></i></li>
+            <div class="menu-item active" onclick="display_item(0)">
+                <img src="../images/java.png" alt="">
+                <div class="menu-caption">Dashboard</div>
+
+            </div>
+
+            <div class="menu-item" onclick="display_item(1)">
+                <img src="../images/java.png" alt="">
+                <div class="menu-caption">Messages</div>
+
+            </div>
+
+            <div class="menu-item" onclick="display_item(2)">
+                <img src="../images/java.png" alt="">
+                <div class="menu-caption">Blogs</div>
+
+            </div>
+
+            <div class="menu-item" onclick="display_item(3)">
+                <img src="../images/java.png" alt="">
+                <div class="menu-caption">Profile</div>
+
+            </div>
+
+        </div>
+        <div class="right-pane">
+            <div class="pane-item">
+                <li class="burger" onclick="dropSideNav()"><i class="fa fa-bars"></i></li>
+                <div class="pane-item-title">
+                    Dashboard
+                </div>
+                <div class="pane-item-content">
+                    <div class="profile-section">
+                        <div class="profile-left">
+                            <div class="profile-pic-section">
+                                <div class="profile-img">
+                                    <img src="../images/login2.jpg" alt="">
+                                </div>
+                                <div class="select-img-btn">
+                                    <input type="file" name="picture" id="picture">
+                                </div>
+                            </div>
+
+                            <div class="skills">
+                                <div class="skills-title title">
+                                    Skills
+                                </div>
+                                <ul class="selected-skills">
+                                    <li>PHP</li>
+                                    <li>Javascript</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                        <div class="profile-right">
+                            <div class="right-title title">
+                                Pesonal Information
+                            </div>
+                            <div class="info-section">
+                                <div class="info">
+                                    <div class="info-label">
+                                        Username:
+                                    </div>
+                                    <div class="info-value">
+                                        berwa_nowo
+                                    </div>
+                                </div>
+
+                                <div class="info">
+                                    <div class="info-label">
+                                        Email:
+                                    </div>
+                                    <div class="info-value">
+                                        berwanoel2002@gmail.com
+                                    </div>
+                                </div>
+
+                                <div class="info">
+                                    <div class="info-label">
+                                        Phone:
+                                    </div>
+                                    <div class="info-value">
+                                        +250 7859 54516
+                                    </div>
+                                </div>
+
+                                <div class="info">
+                                    <div class="info-label">
+                                        Address:
+                                    </div>
+                                    <div class="info-value">
+                                        Nyamasheke, Rwanda
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                            <div class="profile-edit-btn">
+                                <button onclick="display_item(3)">Edit</button>
+                            </div>
+                        </div>
+                   </div>                     
+                </div>
+            </div>
+
+            <div class="pane-item">
+                <li class="burger" onclick="dropSideNav()"><i class="fa fa-bars"></i></li>
+                <div class="pane-item-title">
+                    Message
+                </div>
+                <div class="pane-item-content">
+                    <div class="users-messages">
+                        <div class="message">
+                            <div class="writer-avatar">
+                                <img src="../images/login2.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <div class="writer-name">
+                                    Berwa Noel
+                                </div>
+                                <div class="message-content">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                    Natus dignissimos eum, possimus reiciendis hic suscipit!
+                                </div>
+                                <div class="message-date">
+                                    Jun 20, 2020
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message">
+                         <div class="writer-avatar">
+                             <img src="../images/login2.jpg" alt="">
+                         </div>
+                         <div class="message-body">
+                             <div class="writer-name">
+                                 Berwa Noel
+                             </div>
+                             <div class="message-content">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel atque, 
+                                id possimus quibusdam et asperiores itaque voluptatum, unde quasi 
+                                eligendi aut dolor doloremque eius cum sed quis dolorem facere aperiam? 
+                                Quae explicabo tenetur nemo accusamus iste optio incidunt illum quasi alias 
+                                consequuntur, dicta quis temporibus, 
+                                quia deserunt asperiores libero doloremque?
+                             </div>
+                             <div class="message-date">
+                                 Jun 20, 2020
+                             </div>                             
+                         </div>
+                        </div>
+                        <div class="message">
+                            <div class="writer-avatar">
+                                <img src="../images/login2.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <div class="writer-name">
+                                    Berwa Noel
+                                </div>
+                                <div class="message-content">
+                                   Lorem ipsum dolor sit amet consectetur 
+                                   adipisicing elit. Est accusantium 
+                                   veritatis cumque modi. Nemo, vitae!
+                                </div>
+                                <div class="message-date">
+                                    Jun 20, 2020
+                                </div>                             
+                            </div>
+                           </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pane-item">
+                <li class="burger" onclick="dropSideNav()"><i class="fa fa-bars"></i></li>
+                <div class="pane-item-title">
+                    Blogs
+                </div>
+                <div class="pane-item-content">
+                    <div class="blogs-area">
+
+                        <div class="blog">
+                            <div class="blog-img">
+                                <img src="../images/login2.jpg" alt="">
+                            </div>
+                            <div class="blog-text">
+                                <div class="blog-title">
+                                    Life without computers in daily life
+                                </div>
+                                
+                                <div class="blog-info">
+                                    <div class="blog-author">
+                                        By B. Noel
+                                    </div>
+                                    <div class="blog-date">
+                                        Feb 21, 2020
+                                    </div>
+                                </div>
+                                <div class="blog-btns">
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog">
+                            <div class="blog-img">
+                                <img src="../images/login3.jpg" alt="">
+                            </div>
+                            <div class="blog-text">
+                                <div class="blog-title">
+                                    5 ways to increase your typing speed
+                                </div>
+                                
+                                <div class="blog-info">
+                                    <div class="blog-author">
+                                        By B. Noel
+                                    </div>
+                                    <div class="blog-date">
+                                        Feb 21, 2020
+                                    </div>
+                                </div>
+                                <div class="blog-btns">
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="blogs-area">
+
+                        <div class="blog">
+                            <div class="blog-img">
+                                <img src="../images/login2.jpg" alt="">
+                            </div>
+                            <div class="blog-text">
+                                <div class="blog-title">
+                                    Life without computers in daily life
+                                </div>
+                                
+                                <div class="blog-info">
+                                    <div class="blog-author">
+                                        By B. Noel
+                                    </div>
+                                    <div class="blog-date">
+                                        Feb 21, 2020
+                                    </div>
+                                </div>
+                                <div class="blog-btns">
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog">
+                            <div class="blog-img">
+                                <img src="../images/login3.jpg" alt="">
+                            </div>
+                            <div class="blog-text">
+                                <div class="blog-title">
+                                    5 ways to increase your typing speed
+                                </div>
+                                
+                                <div class="blog-info">
+                                    <div class="blog-author">
+                                        By B. Noel
+                                    </div>
+                                    <div class="blog-date">
+                                        Feb 21, 2020
+                                    </div>
+                                </div>
+                                <div class="blog-btns">
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="blogs-area">
+
+                        <div class="blog">
+                            <div class="blog-img">
+                                <img src="../images/login2.jpg" alt="">
+                            </div>
+                            <div class="blog-text">
+                                <div class="blog-title">
+                                    Life without computers in daily life
+                                </div>
+                                
+                                <div class="blog-info">
+                                    <div class="blog-author">
+                                        By B. Noel
+                                    </div>
+                                    <div class="blog-date">
+                                        Feb 21, 2020
+                                    </div>
+                                </div>
+                                <div class="blog-btns">
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog">
+                            <div class="blog-img">
+                                <img src="../images/login3.jpg" alt="">
+                            </div>
+                            <div class="blog-text">
+                                <div class="blog-title">
+                                    5 ways to increase your typing speed
+                                </div>
+                                
+                                <div class="blog-info">
+                                    <div class="blog-author">
+                                        By B. Noel
+                                    </div>
+                                    <div class="blog-date">
+                                        Feb 21, 2020
+                                    </div>
+                                </div>
+                                <div class="blog-btns">
+                                    <button class="view-btn">View</button>
+                                    <button class="edit-btn">Edit</button>
+                                    <button class="delete-btn">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="pane-item">
+                <li class="burger" onclick="dropSideNav()"><i class="fa fa-bars"></i></li>
+                <div class="pane-item-title">
+                    Settings
+                </div>
+                <div class="pane-item-content" style="overflow-x: auto;">
+                   <div class="profile-section">
+                        <div class="profile-left">
+                            <div class="profile-pic-section">
+                                <div class="profile-img">
+                                    <img src="../images/login2.jpg" alt="">
+                                </div>
+                                <div class="select-img-btn">
+                                    <input type="file" name="picture" id="picture">
+                                </div>
+                            </div>
+
+                            <div class="skills">
+                                <div class="skills-title title">
+                                    Skills
+                                </div>
+                                <ul class="selected-skills">
+                                    <li>PHP</li>
+                                    <li>Javascript</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <div class="add-skill">
+                                    <div class="skill-input" id="skill-input">
+                                        <input type="text" name="slills-name" id="skill-name" placeholder="Write a skill or tallent"><br>
+                                        <textarea name="skill-description" id="skill-description" placeholder="Describe the skill, or talent here."></textarea><br>
+                                        <input type="file" name="skill-image" id="skill-image">
+                                    </div>
+                                    <div class="skill-action-btns">
+                                        <button class="add-btn" id="add-btn" onclick="toggleInput()">Add+</button>
+                                        <button class="save-btn">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-right">
+                            <div class="right-title title">
+                                Pesonal Information
+                            </div>
+                            <div class="inputs-section">
+                                <div class="control">
+                                    <label for="username">Username</label><br>
+                                    <input type="text" name="username" id="username">
+                                </div>
+
+                                <div class="control">
+                                    <label for="email">Email</label><br>
+                                    <input type="email" name="email" id="email">
+                                </div>
+
+                                <div class="control">
+                                    <label for="phone">Mobile phone</label><br>
+                                    <input type="text" name="phone" id="phone">
+                                </div>
+
+                                <div class="control">
+                                    <label for="password1">New Password</label><br>
+                                    <input type="password" name="password1" id="password1">
+                                </div>
+
+                                <div class="control">
+                                    <label for="password2">Confirm Password</label><br>
+                                    <input type="password" name="password2" id="password2">
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+
+        </div>
+   </section>
+
+   
+
+
+   <script src="../JS/nav.js"></script>
+   <script src="../JS/dashboard.js"></script>
+  </body>
+  </html> 

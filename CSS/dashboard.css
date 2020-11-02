@@ -1,0 +1,498 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #852270;
+}
+
+/*------------------------for all pages except landing page--------------------------------*/
+#nav-container{
+    width:100%;
+    background-color: #852270;
+    padding:initial;
+}
+#navigation{
+    padding: 20px 20px 10px; /* it has to be customised in mediaqueeries*/
+}
+
+/*--------------------------------------------------------*/
+
+#main{
+    display: flex;
+    align-items: stretch;
+    min-height:85vh;
+}
+
+.user-avatar img{
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: -6px;
+    
+}
+
+.right-pane{
+    background-color: white;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.left-pane{
+    background-color: rgb(27, 3, 24);
+    color: white;
+    width:20%;
+    padding: 50px 0px 30px 30px;
+
+}
+.menu-item{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    
+    
+}
+
+.menu-item.active{
+    background-color: white;
+    color: black;
+    border-radius: 10px 0px 0px 10px;
+}
+.menu-item img{
+    height:30px;
+}
+.menu-caption{
+    display: inline-block;
+    padding-top: -50px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pane-item{
+    padding:20px 40px;
+    display: none;
+
+}
+
+.pane-item-title{
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.pane-item-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    
+}
+
+.info{
+    display: flex;
+    margin-bottom: 7px;
+}
+.info-label{
+    font-weight: 600;
+    flex-basis: 20%;
+}
+.info-value{
+    margin-left: 5px;
+    flex-basis: 80%;
+}
+
+.profile-edit-btn{
+    margin-top: 20px;
+}
+
+.profile-edit-btn button{
+    padding: 2px 10px;
+    border: 1px solid #0b41a5;
+    color: #0b41a5;
+    background: transparent;
+    outline: none;
+    border-radius: 3px;
+}
+
+li.burger{
+    list-style: none;
+    display: none;
+
+}
+
+.message{
+    display: flex;
+    margin-left: 15px;
+    margin-top: 20px;
+    padding: 12px 15px;
+    background-color: rgb(247, 230, 247);
+
+}
+.writer-avatar img{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.message-body{
+    margin-left: 15px;
+}
+.writer-name{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.message-date{
+    margin-top: 20px;
+}
+
+.reply-btn{
+    margin-top: 8px;
+}
+.reply-btn button{
+    padding: 2px 8px;
+    color: white;
+    background-color: rgb(51, 6, 45);
+    border: none;
+    border-radius: 3px;
+}
+
+
+.reply-box textarea{
+    width: 90%;
+    background-color: #fae1f4;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.blogs-area{
+    display: flex;
+}
+
+.blog{
+    display: flex;
+    flex-basis: 49%;
+    margin: 10px;
+}
+
+.blog-img, .blog-text{
+    display: flex;
+    
+}
+.blog-img{
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    flex-basis: 40%;
+}
+.blog-img img{
+    width: 100%;
+}
+.blog-text{
+    flex-direction: column;
+    margin-left: 10px;
+    flex-basis: 58%;
+}
+.blog-title{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+.blog-description{
+    margin-bottom: 7px;
+}
+
+.blog-info{
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+
+.blog-btns button{
+    padding: 1px 12px;
+    border-radius: 3px;
+    transition: 0.4s;
+    font-size: 12px;
+}
+
+.view-btn{
+    color: #07ad1d;
+    border: solid 1px #07ad1d;
+    background: transparent;
+}
+
+.view-btn:hover{
+    color: white;
+    background: #07ad1d;
+}
+.edit-btn{
+    color: #0b41a5;
+    border: solid 1px #0b41a5;
+    background: transparent;
+}
+
+.edit-btn:hover{
+    color: white;
+    background: #0b41a5;
+}
+
+.delete-btn{
+    color: #a50b18;
+    border: solid 1px #a50b18;
+    background: transparent;
+}
+.delete-btn:hover{
+    color: white;
+    background: #a50b18;
+}
+
+
+.profile-section{
+    display: flex;
+}
+
+.profile-left, .profile-right{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.profile-left{
+    flex-basis: 20%;
+}
+.profile-right{
+    flex-basis: 80%;
+    margin-left: 50px;
+    
+}
+.profile-pic-section{
+    width:100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.profile-img{
+    margin-bottom: 7px;
+}
+.profile-img img{
+    width:100%;
+    height: 100%;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.skills{
+    margin-top: 40px;
+}
+
+ul.selected-skills{
+    margin-left: 5px;
+    padding: 7px 5px;
+    border-radius: 3px;
+    margin-bottom: 7px;
+}
+.skills ul li{
+    list-style: none;
+    margin-bottom: 3px;
+}
+.add-skill{
+    margin-left: 7px;
+}
+.skill-input{
+    margin-bottom: 10px;
+    display: none;
+    transition: 1s;
+}
+
+.skill-input.show{
+    display: block;
+}
+
+.skill-input input[type="text"], .skill-input textarea{
+    width: 90%;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 1px solid #852270;
+}
+
+.skill-input input[type="text"]{
+    height: 24px;
+    padding: 1px 5px;
+}
+
+.skill-input textarea{
+    height: 100px;
+    padding: 2px 5px;
+}
+
+.skill-action-btns{
+    display: flex;
+}
+.add-btn, .save-btn{
+    margin: 0px 3px;
+    padding: 1px 6px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-btn{
+    border: 1px solid #0b41a5;
+    color: #0b41a5ba;
+}
+
+.add-btn.cancel-btn{
+    border: 1px solid #a50b18;
+    color: #a50b18;
+}
+
+.save-btn{
+    border: 1px solid #07ad1d;
+    color: #07ad1d;
+}
+.inputs-section{
+    margin-top: 10px;
+}
+.control{
+    margin-bottom: 7px;
+}
+.control input{
+    width: 300px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: 1px solid #852270;
+    height: 24px;
+    padding: 1px 5px;
+    margin-top: 4px;
+}
+
+
+@media only screen and (max-width:1024px){
+    .blog-img{
+        flex-basis: 45%;
+    }
+    .blog-text{
+        flex-basis: 53%;
+    }
+}
+
+/* This applies for pages which are accessed by logged-in users only*/
+@media only screen and (max-width: 798px){
+    .menu.responsive-nav .user-avatar{
+        display:none;
+    }
+    .menu ul li{
+        display: none;
+    }
+
+    li.burger{
+        display: inline-block;
+    }
+
+    .left-pane{
+        display: none;
+    }
+
+    .right-pane{
+        width: 100%;
+        
+    }
+
+    .left-pane.responsive{
+        position: absolute;
+        left:0;
+        top: 57px;
+        width:250px;
+        height:78vh;
+        display: block;
+    }
+
+    .left-pane.responsive .burger{
+        position: absolute;
+        left: 50%;
+        top:20px;
+    }
+
+    .blogs-area{
+        flex-direction: column;
+    }
+    .blog-img{
+        height: 150px;
+        flex-basis: 42%;
+    }
+    .blog-text{
+        flex-basis: 56%;
+    }
+    
+
+    
+    
+    
+
+   
+}
+/*---------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:600px) {
+    .pane-item-content{
+        margin-top: 10px;
+    }
+
+    .blog-img{
+        height: 110px;
+        flex-basis: 40%;
+    }
+
+    .blog-text{
+        flex-basis: 60%;
+    }
+    .profile-section{
+        flex-direction: column;
+    }
+
+    .profile-right{
+        margin-left: initial;
+    }
+
+    .profile-left, .profile-right{
+        flex-basis: 100%;
+    }
+}
+@media only screen and (max-width:465px) {
+    .pane-item{
+        padding:15px;
+    }
+
+    .blog-img{
+        height: 105px;
+    }
+
+}
+@media only screen and (max-width:380px) {
+    .blog{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+     
+    .blog-img{
+        height: 180px;
+    }
+    .blog-title{
+        margin-top: 10px;
+    }
+    .control input{
+        width:250px;
+    }
+    
+}
+
+
+
+
