@@ -1,0 +1,136 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+
+body{
+    background-color: #852270;
+}
+
+a{
+    text-decoration: none;
+    color:inherit
+}
+
+.user-avatar img{
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: -6px;
+    
+}
+
+/*------------------------for all pages except landing page--------------------------------*/
+#nav-container{
+    width:100%;
+    background-color: #852270;
+    padding:initial;
+}
+#navigation{
+    padding: 20px 20px 10px; /* it has to be customised in mediaqueeries*/
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+#main-section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    background-color: white;
+    width:30%;
+    padding:20px 30px;
+    position: absolute;
+    top: 20%;
+    border-radius: 15px;
+}
+.form-title{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.control{
+    padding: 10px;
+}
+label{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+input[type="text"], textarea{
+    width: 100%;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7d7f0;
+    padding: 4px 8px;
+    font-size: 17px;
+}
+input[type="text"]{
+    height: 30px;
+}
+textarea{
+    height:200px;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn button{
+    padding: 5px 12px;
+    background-color: #852270;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 798px){
+    .menu.responsive-nav .user-avatar{
+        display:none;
+    }
+    .menu ul li{
+        display: none;
+    }
+    
+    .form-container{
+        width:75%;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------*/
+@media only screen and (max-width:600px) {
+   
+}
+@media only screen and (max-width:465px) {
+    .form-container{
+        width: 100%;
+        position: relative;
+        margin: 40px 20px;
+    }
+    
+   
+}
+@media only screen and (max-width:350px) {
+    .form-container{
+        margin: 40px 10px;
+    }
+    
+}
