@@ -1,0 +1,149 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+
+    background-color: #852270;
+}
+
+.user-avatar img{
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: -6px;
+    
+}
+
+#form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top:20%;
+    
+    
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 30px;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px 30px 40px;
+    margin:20px;
+    
+}
+
+
+.file-input{
+    margin-bottom: 10px;
+}
+
+input.title{
+    height: 30px;
+    width: 100%;
+    background: rgb(241, 200, 229);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.form-controls textarea{
+    background: rgb(241, 200, 229);
+    width:100%;
+    outline:none;
+    border-radius: 10px;
+}
+.form-title{
+    display: block;
+    font-size: 28px;
+    margin: 30px auto;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.form-controls label{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.create-button{
+    padding: 10px 40px;
+    background-color: #852270;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 8px;
+    text-align: center;
+    color:white;
+
+}
+
+.button-left{
+    text-align: center;
+}
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background-color: transparent !important;
+    padding: 20px 0px !important;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+    #form-container{
+        position: relative !important;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }    
+}
+
+
+/* This applies for pages which are accessed by logged-in users only*/
+@media only screen and (max-width: 798px){
+    .menu.responsive-nav .user-avatar{
+        display:none;
+    }
+    .menu ul li{
+        display: none;
+    }
+}
+/*---------------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width:600px) {
+   
+}
+
+@media only screen and (max-width:350px) {
+    
+}
+
+
+
+@media only screen and (max-width:465px) {
+      
+    #footer{
+        position: relative;
+        margin-top: 20px;
+    }
+
+    #form-container{
+        position: relative;
+    }
+}
+
