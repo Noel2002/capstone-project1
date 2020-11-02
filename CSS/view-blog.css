@@ -1,0 +1,147 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #852270;
+}
+
+.user-avatar img{
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: -6px;
+    
+}
+
+#main-content{
+    background-color: white;
+    padding:50px 150px;
+    font-size: 20px;
+}
+
+.blog-title{
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.blog-img img{
+    width: 100%;
+}
+
+.blog-info{
+    margin: 8px 0px;
+}
+
+.blog-content{
+    margin-bottom: 50px;
+    font-size: 22px;
+}
+
+.write-comment{
+    display: flex;
+    align-items: flex-end;
+}
+.write-comment textarea{
+    width: 90%;
+    height: 40px;
+    padding:5px 8px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.write-comment button{
+    padding:8px 15px;
+    display: inline-block;
+    margin-left: 10px;
+    background-color: #852270;
+    color:white;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.users-comments{
+    margin-top: 35px;
+}
+
+.comment{
+    display: flex;
+    margin-left: 15px;
+    margin-top: 20px;
+    padding: 12px 15px;
+    background-color: rgb(247, 230, 247);
+
+}
+.writer-avatar img{
+    height:50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.comment-body{
+    margin-left: 15px;
+}
+.writer-name{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.comment-date{
+    margin-top: 20px;
+}
+
+
+
+
+
+@media only screen and (max-width: 798px){
+    .menu.responsive-nav .user-avatar{
+        display:none;
+    }
+    .menu ul li{
+        display: none;
+    }
+
+    li.burger{
+        display: inline-block;
+    }
+
+    #main-content{
+        padding: 50px 100px;
+    }
+
+      
+}
+
+@media only screen and (max-width:600px) {
+    #main-content{
+        padding: 30px 50px;
+    }
+    .write-comment{
+        flex-direction: column;
+    }
+
+    .write-comment button{
+        margin-top: 7px;
+    }
+}
+@media only screen and (max-width:465px) {
+    #main-content{
+        padding: 30px 20px;
+    }
+
+   
+}
+@media only screen and (max-width:350px) {
+    
+     
+}
+@media only screen and (max-width:350px) {
+    
+     
+}
