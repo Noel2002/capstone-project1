@@ -1,0 +1,98 @@
+
+#navigation{
+    display:flex;
+    justify-content: space-between;
+    color:white;
+}
+
+#nav-container{  /*for other pages except homepage*/
+    padding: 20px 50px 10px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    color:white;
+    margin: 0 10px;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.logo{
+    display: flex;
+}
+
+.menu{
+    display:flex;
+    position: relative;
+}
+.join-btn{
+    background-color: #18227e;
+    border-radius: 30px;
+    padding: 7px 20px;
+}
+.burger-icon{
+    display: none;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 798px) {
+   
+  nav ul li:not(:first-child){
+      display:none;
+  }
+  .burger-icon{
+      display: block;
+  }
+
+  .menu.responsive-nav ul li{
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-top: 15px;
+
+  }
+ 
+
+
+.menu.responsive-nav ul li.burger-icon{
+    margin-bottom: 50px;
+}
+
+.menu.menu.responsive-nav{
+    position: fixed;
+    height:100vh;
+    width: 220px;
+    background-color: rgb(54, 12, 47);
+    top: 0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.menu.responsive-nav ul{
+    margin-top:20px;
+}
+
+}
