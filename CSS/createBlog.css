@@ -157,6 +157,9 @@ input[type="text"], textarea{
 
 @media only screen and (max-width:465px) {
       
+    #nav-container{  /*for other pages except homepage*/
+        padding: 20px 10px 0px;
+    }
     #footer{
         position: relative;
         margin-top: 20px;
