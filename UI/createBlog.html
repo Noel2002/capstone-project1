@@ -10,7 +10,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>   
-    
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>   
+
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
@@ -60,7 +61,7 @@
             <textarea name="description" id="description" cols="100" rows="10"></textarea><br>
 
             <label for="blog_picture"></label><br>
-            <input type="file" name="blog_picture" class="file-input"><br>
+            <input type="file" name="blog_picture" class="file-input" onchange="uploadImage(event)"><br>
 
             <div class="button-left"><button class="create-button" id="create-btn">Create</button></div>
 
@@ -96,6 +97,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const db=firebase.firestore();
+    const fbstorage= firebase.storage();
     db.settings({ timestampsInSnapshots: true });
 </script>
      <!-------------------------------------------------------------------->
