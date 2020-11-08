@@ -9,6 +9,7 @@ function display_item(n){
 
     menu[n].classList.add("active");
     pane_item[n].style.display="block";
+    closeSideNav();
 }
 
 
