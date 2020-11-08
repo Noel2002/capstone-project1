@@ -486,7 +486,67 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  db=firebase.firestore();
+  const db=firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+
+//---------firestorecodes for Displaying Messages--------
+
+const userMessages= document.querySelector('.users-messages');
+
+function renderMessages(doc){
+    let message= document.createElement('div');
+    message.setAttribute('class','message');
+    message.setAttribute('data-id',doc.id);
+
+    let writerAvatar=document.createElement('div');
+    writerAvatar.setAttribute('class', 'writer-avatar');
+
+    let avatarImg=document.createElement('img');
+    avatarImg.setAttribute('src','../images/login2.jpg');
+
+    let messageBody=document.createElement('div');
+    messageBody.setAttribute('class','message-body');
+
+    let writerName= document.createElement('div');
+    writerName.setAttribute('class','writer-name');
+    
+    let messageContent= document.createElement('div');
+    messageContent.setAttribute('class','message-content');
+
+    let messageDate= document.createElement('div');
+    messageDate.setAttribute('class','message-date');
+
+
+    messageDate.textContent= doc.data().message_time;
+    writerName.textContent= doc.data().sender;
+    messageContent.textContent= doc.data().content;
+
+    messageBody.appendChild(writerName);
+    messageBody.appendChild(messageContent);
+    messageBody.appendChild(messageDate);
+
+    writerAvatar.appendChild(avatarImg);
+
+    message.appendChild(writerAvatar);
+    message.appendChild(messageBody);
+
+
+   
+
+    userMessages.appendChild(message);
+    
+    
+
+}
+
+
+db.collection('messages').get().then((snapshot)=>{
+    snapshot.docs.forEach(doc => {
+        renderMessages(doc);
+    });
+});
+
+//-------------------------------------------------------
 
 </script>
   </body>
