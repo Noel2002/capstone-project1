@@ -171,12 +171,19 @@ function renderBlogs(doc){
 
     blog.appendChild(blogImg);
     blog.appendChild(blogText);
-
-
-   
+  
 
     blogsArea.appendChild(blog);
-    
+
+    deleteBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        let id= e.target.closest(".blog").getAttribute('data-id');
+        console.log(id);
+        db.collection('blogsTest').doc(id).delete();
+        alert("Blog Deleted successfully!");
+        
+
+    })
     
 
 }
