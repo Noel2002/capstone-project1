@@ -24,7 +24,6 @@ function uploadImage(){
 var form= document.getElementById('form');
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    uploadImage();
     if(validate()){
         db.collection('blogsTest').add({
             title: form.title.value,
