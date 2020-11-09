@@ -183,7 +183,18 @@ function renderBlogs(doc){
         alert("Blog Deleted successfully!");
         
 
-    })
+    });
+
+    editBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        let id= e.target.closest(".blog").getAttribute('data-id');
+        console.log(id);
+        alert("Your are being resirected");
+
+        location.replace("edit-blog.html?"+id);     
+        
+
+    });
     
 
 }
