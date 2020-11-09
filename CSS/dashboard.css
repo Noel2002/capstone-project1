@@ -179,7 +179,7 @@ li.burger{
 
 .blog{
     display: flex;
-    flex-basis: 48%;
+    flex-basis: 47%;
     margin: 10px;
 }
 
