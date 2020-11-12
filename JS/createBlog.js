@@ -24,12 +24,17 @@ function uploadImage(){
 var form= document.getElementById('form');
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
+    var today= new Date();
+    var arrMonths= ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    var blog_date= arrMonths[today.getMonth()] +' '+ today.getDate()+', '+ today.getFullYear()+'  '+ today.getHours()+':'+today.getMinutes();
+    
     if(validate()){
         db.collection('blogsTest').add({
             title: form.title.value,
             content: form.description.value,
             writer: form.writer.value,
-            imgUrl: url
+            imgUrl: url,
+            blog_date: blog_date
         });
     
         form.title.value='';
