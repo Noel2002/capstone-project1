@@ -35,7 +35,7 @@ function render(doc){
     date.textContent= doc.data().blog_date;
     author.textContent= "By "+ doc.data().writer;
     title.textContent= doc.data().title;
-    summary.textContent=doc.data().content;
+    summary.textContent=doc.data().content.slice(0,200)+'...';
 
     blogImg.appendChild(coverImg);
 
