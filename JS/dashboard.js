@@ -197,6 +197,17 @@ function renderBlogs(doc){
     });
     
 
+    viewBtn.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        let id= e.target.closest(".blog").getAttribute('data-id');
+        console.log(id);
+        alert("Your are being redirected");
+
+        location.replace("view-blog.html?"+id);     
+        
+
+    });
+
 }
 
 //------------------------------------------------------
