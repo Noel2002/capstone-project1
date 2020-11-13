@@ -19,3 +19,71 @@ function renderBlog(doc){
     blogContent.innerHTML= doc.data().content;
 
 }
+
+db.collection('comments').where('blog_id',"==", queryString).get().then((snap)=>{
+    console.log(snap);
+    renderComments();
+});
+
+let commentsArea= document.getElementById('user-comments');
+function renderComments(doc){
+    let comment= document.createElement('div');
+    comment.setAttribute('class', 'comment');
+
+    let avatar= document.createElement('div');
+    avatar.setAttribute('class', 'writer-avatar');
+
+    let avatarimg= document.createElement('img');
+    avatarimg.setAttribute('src', '../images/login2.jpg');
+    
+    let commentBody= document.createElement('div');
+    commentBody.setAttribute('class', 'commentBody');
+
+    let writerName= document.createElement('div');
+    writerName.setAttribute('class', 'writer-name');
+
+    let commentContent= document.createElement('div');
+    commentContent.setAttribute('class', 'comment-content');
+
+    let commentDate= document.createElement('div');
+    commentDate.setAttribute('class', 'comment-date');
+
+
+    writerName.textContent= doc.data().sender;
+    commentContent.textContent= doc.data().comment_body;
+    commentDate.textContent= doc.data().comment_date;
+
+    commentBody.appendChild(writerName);
+    commentBody.appendChild(commentContent);
+    commentBody.appendChild(commentDate);
+
+    comment.appendChild(avatar);
+    comment.appendChild(commentBody);
+
+    commentsArea.appendChild(comment);
+
+
+
+
+
+
+    avatar.appendChild(avatarimg);
+    
+
+    
+
+}
+
+let comSender= document.getElementById('sender');
+let com= document.getElementById('comment-box');
+let sendbtn= document.getElementById('send-btn');
+
+sendbtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    db.collection('comments').add({
+        sender: comSender.value,
+        comment_body: com.value,
+        blog_id: queryString
+    });
+    alert('comment sent');
+});
