@@ -83,10 +83,14 @@ let sendbtn= document.getElementById('send-btn');
 
 sendbtn.addEventListener('click', (e)=>{
     e.preventDefault();
+    var today= new Date();
+    var arrMonths= ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    var commentTime= arrMonths[today.getMonth()] +' '+ today.getDate()+', '+ today.getFullYear()+'  '+ today.getHours()+':'+today.getMinutes();
     db.collection('comments').add({
         sender: comSender.value,
         comment_body: com.value,
-        blog_id: queryString
+        blog_id: queryString,
+        comment_date: commentTime
     });
     alert('comment sent');
 });
