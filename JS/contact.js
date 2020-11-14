@@ -1,4 +1,5 @@
 var form= document.getElementById('form');
+var errorMsg= document.querySelector('.error');
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -8,12 +9,18 @@ form.addEventListener('submit', (e)=>{
     
     function validate(){
         if(form.username.value==""){
-            alert('Enter your name please!');
+            //alert('Enter your name please!');
+            errorMsg.classList.remove('green');
+            errorMsg.classList.add('red');
+            errorMsg.innerHTML='Enter your name please!';
             return false;
         }
 
         if(form.message.value==""){
-            alert('Enter your message please!');
+            //alert('Enter your message please!');
+            errorMsg.classList.remove('green');
+            errorMsg.classList.add('red');
+            errorMsg.innerHTML='Enter your message please!';
             return false;
         }
         else{
@@ -29,7 +36,16 @@ form.addEventListener('submit', (e)=>{
         });
         form.username.value='';
         form.message.value='';
-        alert('Message sent successfully!');
+        errorMsg.classList.remove('red');
+        errorMsg.classList.add('green');
+        errorMsg.innerHTML='Message sent successfully!';
+        setTimeout(hideMessage, 5000);
+        //alert('Message sent successfully!');
+        
+    }
+
+    function hideMessage(){
+        errorMsg.innerHTML='';
     }
     
 
