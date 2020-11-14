@@ -36,7 +36,7 @@ button{
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 5px;
     flex-direction: column;
     background-color: #fff;
     padding: 20px 30px;
@@ -47,31 +47,64 @@ button{
 .form-controls{
     margin: 0px 30px;
 }
+.blog-img{
+    margin-bottom: 15px;
+    min-height: 200px;
 
-
+}
+.blog-img img{
+    width: 100%;
+}
 .file-input{
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.upload-progress{
+    color: rgb(0, 207, 52);
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.upload-btn{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.upload-btn button, .create-button{
+    width: 100%;
+    text-align: center;
+    background-color: #852270;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 0px;
+    font-size: 16px;
+    outline: none;
 }
 
 input[type="text"]{
     height: 40px;
-    background: rgb(241, 200, 229);
-    border-radius: 10px;
     margin-bottom: 20px;
-    outline: none;
+    border-bottom: 2px solid #ac3392 !important;
+    width: 100%;
+
 }
 
 input[type="text"], textarea{
-    padding: 3px 10px;
     font-size: 19px;
-    width: 100%;
     border: none;
+    outline:none;
 }
 
 .form-controls textarea{
-    background: rgb(241, 200, 229);
-    outline:none;
-    border-radius: 10px;
+    border: 2px solid #852270;
+    border-radius: 5px;
+    width: 95%;
+    padding: 10px 7px;
+}
+
+.blog-message{
+    color: green;
 }
 .form-title{
     display: block;
@@ -88,22 +121,15 @@ input[type="text"], textarea{
     margin-bottom: 5px;
 }
 
-.create-button{
-    padding: 7px 20px;
-    background-color: #852270;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 8px;
-    text-align: center;
-    color:white;
-    border: none;
-
+.message.red{
+    color: rgb(224, 0, 0);
 }
-
+.message.green{
+    color: green;
+}
 .button-left{
     text-align: center;
+    margin: 20px 0px;
 }
 
 #footer{

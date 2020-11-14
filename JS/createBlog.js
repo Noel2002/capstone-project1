@@ -1,4 +1,14 @@
 var url;
+var blogMessage= document.querySelector('.blog-message');
+let uploadbtn= document.getElementById('upload-btn');
+let coverImg= document.querySelector('.blog-cover-img');
+let uploadPgrs= document.querySelector('.upload-progress');
+
+
+uploadbtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    uploadImage();
+});
 function uploadImage(){
     var image= document.getElementById('file-input').files[0];
     var imageName= image.name;
@@ -7,14 +17,18 @@ function uploadImage(){
     
     uploadTask.on('state_changed', function(snapshot){
         var progress= (snapshot.bytesTransferred/ snapshot.totalBytes)*100;
+        uploadPgrs.innerHTML='Uploading: '+ progress +'%';
         console.log('upload is:' + progress + 'done');
+
     }, function(error){
+
         console.log(error.message);
     }, function(){
         uploadTask.snapshot.ref.getDownloadURL().then((downloadURL)=>{
             url= downloadURL;
             console.log(url);
-            alert('things are still good');
+            coverImg.setAttribute('src', url);
+           // alert('things are still good');
 
             
         });
@@ -27,7 +41,8 @@ form.addEventListener('submit', (e)=>{
     var today= new Date();
     var arrMonths= ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
     var blog_date= arrMonths[today.getMonth()] +' '+ today.getDate()+', '+ today.getFullYear()+'  '+ today.getHours()+':'+today.getMinutes();
-    
+    var fileInput= document.querySelector('#file-input');
+
     if(validate()){
         db.collection('blogsTest').add({
             title: form.title.value,
@@ -40,23 +55,39 @@ form.addEventListener('submit', (e)=>{
         form.title.value='';
         form.description.value='';
         form.writer.value='';
-        alert('Blog created succesfully');
+        coverImg.setAttribute('src', '');
+        fileInput.value='';
+        uploadPgrs.innerHTML='';
+        blogMessage.innerHTML="Blog created successfully";
+        setTimeout(hideMessage,5000);
+
+        //alert('Blog created succesfully');
         
     }
     
 })
 
+let message= document.querySelector('.message');
 function validate(){
     if(form.writer.value==""){
-        alert('Please Enter your name!');
+        message.classList.remove('green');
+        message.classList.add('red');
+        message.innerHTML='Please enter your name';
+        //alert('Please Enter your name!');
         return false;
     }
     if(form.title.value==""){
-        alert('Please enter the title');
+        message.classList.remove('green');
+        message.classList.add('red');
+        message.innerHTML='Please enter the title';
+        //alert('Please enter the title');
         return false;
     }
     if(form.description.value==""){
-        alert('Please enter the content of your blog!');
+        message.classList.remove('green');
+        message.classList.add('red');
+        message.innerHTML='Please enter the content of your blog!';
+        //alert('Please enter the content of your blog!');
         return false;
     }
     else{
@@ -64,3 +95,6 @@ function validate(){
     }
 }
 
+function hideMessage(){
+    blogMessage.innerHTML="";
+}

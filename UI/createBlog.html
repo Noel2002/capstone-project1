@@ -51,19 +51,21 @@
             <div class="form-title">
                 Create blog
             </div>
-            <label for="title">Blog Writer's name</label><br>
-            <input type="text" name="writer" id="writer"><br>
 
-            <label for="title">Title</label><br>
-            <input type="text" name="title" class="title" id="title"><br>
+            <div class="blog-img"><img src="" alt="" class="blog-cover-img"></div>
+            <input type="file" name="blog_picture" class="file-input" id="file-input"><br>
+            <div class="upload-progress"></div>
+            <div class="upload-btn"><button id="upload-btn">Upload</button></div>
+            <input type="text" name="writer" id="writer" placeholder="Writer's name"><br>
 
-            <label for="description">Description</label><br>
-            <textarea name="description" id="description" cols="100" rows="10"></textarea><br>
+            <input type="text" name="title" class="title" id="title" placeholder="Blog title"><br>
 
-            <label for="blog_picture"></label><br>
-            <input type="file" name="blog_picture" class="file-input" id="file-input" onchange="uploadImage()"><br>
-
+            <textarea name="description" id="description" cols="100" rows="10" placeholder="Write your blog here"></textarea><br>
+            <div class="blog-message"></div>
+            
+            <div class="message"></div>
             <div class="button-left"><button class="create-button" id="create-btn">Create</button></div>
+            
 
 
         </form>
@@ -71,9 +73,9 @@
     </div>
    </section>
 
-   <section id="footer">
+   <!--<section id="footer">
     <p>Copyright &copy; 2020 All rights reserved, Nowo Design</p>
-  </section>
+  </section>-->
 
    <script src="../JS/createBlog.js"></script>
    <script src="../JS/nav.js"></script>
