@@ -10,6 +10,7 @@ form.addEventListener('submit', (e)=>{
     function validate(){
         if(form.username.value==""){
             //alert('Enter your name please!');
+            form.username.focus();
             errorMsg.classList.remove('green');
             errorMsg.classList.add('red');
             errorMsg.innerHTML='Enter your name please!';
@@ -18,6 +19,7 @@ form.addEventListener('submit', (e)=>{
 
         if(form.message.value==""){
             //alert('Enter your message please!');
+            form.message.focus();
             errorMsg.classList.remove('green');
             errorMsg.classList.add('red');
             errorMsg.innerHTML='Enter your message please!';
