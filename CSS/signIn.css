@@ -90,7 +90,15 @@ button.submit-button {
     border-radius: 30px;
     font-size: 20px;
 }
-
+.message{
+    text-align: center;
+}
+.message.red{
+    color: rgb(209, 6, 6);
+}
+.message.green{
+    color: green;
+}
 #footer{
     position: absolute;
     bottom: 0;

@@ -42,7 +42,7 @@ function toggleInput(){
 
 auth.onAuthStateChanged(user =>{
     if(!user){
-        alert('logged out successfully');
+        //alert('logged out successfully');
         window.location.href="signIn.html";
     }      
 
