@@ -20,12 +20,15 @@ function renderBlog(doc){
 
 }
 
-db.collection('comments').where('blog_id',"==", queryString).get().then((snap)=>{
-    console.log(snap);
-    renderComments();
+db.collection('comments').where('blog_id','==', queryString).get().then((snap)=>{
+    snap.forEach(element => {
+        console.log(element.data());
+        renderComments(element);
+    });
 });
 
-let commentsArea= document.getElementById('user-comments');
+let commentsArea= document.getElementById('users-comments');
+
 function renderComments(doc){
     let comment= document.createElement('div');
     comment.setAttribute('class', 'comment');
@@ -37,7 +40,7 @@ function renderComments(doc){
     avatarimg.setAttribute('src', '../images/login2.jpg');
     
     let commentBody= document.createElement('div');
-    commentBody.setAttribute('class', 'commentBody');
+    commentBody.setAttribute('class', 'comment-body');
 
     let writerName= document.createElement('div');
     writerName.setAttribute('class', 'writer-name');
