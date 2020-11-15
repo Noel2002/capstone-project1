@@ -5,7 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/view-blog.css">
@@ -40,39 +46,32 @@
 
    <section id="main-content">
        <div class="blog-title">
-            life without computers
+           
        </div>
-       <div class="blog-img">
-           <img src="../images/login4.jpg" alt="">
+       <div class="blog-img" id="blog-img">
+
        </div>
        <div class="blog-info">
-            <div class="author">
-                By Noel Berwa
+            <div class="author" id="author">
+               
             </div>
-            <div class="publish-date">
-                On May 23, 2020 19:25
+            <div class="publish-date" id="publish-date">
+               
             </div>
        </div>
-       <div class="blog-content">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto similique 
-           tempora ratione ad molestias eaque. Dolores, molestias totam eum maiores 
-           dicta tempore doloribus! Nostrum cumque, pariatur reiciendis consectetur 
-           assumenda molestias aliquam ullam, atque fugiat adipisci minus. Suscipit 
-           tenetur incidunt ullam sequi qui pariatur, beatae repellendus harum? 
-           Impedit quam eveniet veniam non qui voluptate. Dolores assumenda aut, 
-           cupiditate veniam adipisci et harum blanditiis itaque ducimus tempora 
-           suscipit illo architecto, totam maxime saepe iusto qui quidem. 
-           Ab maxime cupiditate temporibus in fugit natus voluptate adipisci soluta. 
-           Laborum corporis consequatur ducimus accusamus itaque 
-           ut asperiores dicta officia nesciunt at quam quos, ad quas?
+       <div class="blog-content" id="blog-content">
+          
        </div>
        <div class="comment-box">
            <div class="write-comment">
-               <textarea name="comment" id="comment-box" placeholder="Write your comment"></textarea>
-               <button class="send-button">Send</button>
+               <div class="comment-inputs">
+                    <input type="text" id="sender" placeholder="Write your name here please!">
+                    <textarea name="comment" id="comment-box" placeholder="Write your comment"></textarea>
+               </div>
+               <button class="send-button" id="send-btn">Send</button>
            </div>
 
-           <div class="users-comments">
+           <div class="users-comments" id="users-comments">
                <div class="comment">
                    <div class="writer-avatar">
                        <img src="../images/login2.jpg" alt="">
@@ -125,6 +124,29 @@
 
 
    <script src="../JS/nav.js"></script>
+
+   <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAmWHqnt0a5jWNPe6xaawv0RdKQX8_bQ8",
+      authDomain: "portofolio-test.firebaseapp.com",
+      databaseURL: "https://portofolio-test.firebaseio.com",
+      projectId: "portofolio-test",
+      storageBucket: "portofolio-test.appspot.com",
+      messagingSenderId: "781121740902",
+      appId: "1:781121740902:web:c1d5c83dd78eb3bcbe8da7",
+      measurementId: "G-81094VR4W3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db=firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  
+  
+  </script>
+
+  <script src="../JS/view-blog.js"></script>
 
    </body>
    </html>

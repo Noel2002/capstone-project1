@@ -173,9 +173,15 @@ li.burger{
     display: flex;
 }
 
+#blogs-area{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .blog{
     display: flex;
-    flex-basis: 49%;
+    flex-basis: 47%;
     margin: 10px;
 }
 
@@ -422,6 +428,10 @@ ul.selected-skills{
     }
 
     .blogs-area{
+        flex-direction: column;
+    }
+
+    #blogs-area{
         flex-direction: column;
     }
     .blog-img{

@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+       <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+       <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+       <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+   
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
@@ -44,19 +51,18 @@
                 Create blog
             </div>
             <label for="title">Blog Writer's name</label><br>
-            <input type="text" name="writer" value="B. Noel"><br>
+            <input type="text" name="writer"  id="writer"><br>
             
             <label for="title">Title</label><br>
-            <input type="text" name="title" value="The world without computers" class="title"><br>
+            <input type="text" name="title"  class="title" id="title"><br>
 
             <label for="description">Description</label><br>
-            <textarea name="description" id="" cols="100" rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum illo facilis ut iusto provident doloremque sed praesentium nulla modi? Consequuntur dolore voluptates nemo atque harum!
-            </textarea><br>
+            <textarea name="description" id="content" cols="100" rows="10"></textarea><br>
 
             <label for="blog_picture"></label><br>
             <input type="file" name="blog_picture" class="file-input"><br>
 
-            <div class="button-left"><button class="create-button">Update</button></div>
+            <div class="button-left"><button class="create-button" id="update-btn">Update</button></div>
 
 
         </form>
@@ -68,5 +74,28 @@
 
 
    <script src="../JS/nav.js"></script>
+
+   <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAmWHqnt0a5jWNPe6xaawv0RdKQX8_bQ8",
+      authDomain: "portofolio-test.firebaseapp.com",
+      databaseURL: "https://portofolio-test.firebaseio.com",
+      projectId: "portofolio-test",
+      storageBucket: "portofolio-test.appspot.com",
+      messagingSenderId: "781121740902",
+      appId: "1:781121740902:web:c1d5c83dd78eb3bcbe8da7",
+      measurementId: "G-81094VR4W3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db=firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  
+  
+  </script>
+
+   <script src="../JS/edit-blog.js"></script>
   </body>
   </html> 
