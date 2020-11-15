@@ -2,6 +2,7 @@ let blogImg= document.getElementById('blog-img');
 let author= document.getElementById('author');
 let pubDate= document.getElementById('publish-date');
 let blogContent= document.getElementById('blog-content');
+let title= document.querySelector('.blog-title');
 var queryString = location.search.substring(1);
 console.log(queryString);
 
@@ -17,6 +18,7 @@ function renderBlog(doc){
     author.innerHTML=doc.data().writer;
     pubDate.innerHTML= doc.data().blog_date;
     blogContent.innerHTML= doc.data().content;
+    title.innerHTML= doc.data().title;
 
 }
 
