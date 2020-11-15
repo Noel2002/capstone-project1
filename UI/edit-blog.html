@@ -11,13 +11,15 @@
        <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
        <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-storage.js"></script>
+
    
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/createBlog.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/footer.css">
-    <title>Create blog</title>
+    <title>Edit blog</title>
   </head>
   <body>
    <section id="nav-container">
@@ -46,23 +48,25 @@
    <section id="form-container">
     <div class="form">
        
-        <form action="#" name="create-blog-form" class="form-controls">
+        <form name="create-blog-form" id="form" class="form-controls">
             <div class="form-title">
-                Create blog
+                Edit Blog
             </div>
-            <label for="title">Blog Writer's name</label><br>
-            <input type="text" name="writer"  id="writer"><br>
+
+            <div class="blog-img"><img src="" alt="" class="blog-cover-img"></div>
+            <input type="file" name="blog_picture" class="file-input" id="file-input"><br>
+            <div class="upload-progress"></div>
+            <div class="upload-btn"><button id="upload-btn">Upload</button></div>
+            <input type="text" name="writer" id="writer"><br>
+
+            <input type="text" name="title" class="title" id="title"><br>
+
+            <textarea name="description" id="description" cols="100" rows="10"></textarea><br>
+            <div class="blog-message"></div>
             
-            <label for="title">Title</label><br>
-            <input type="text" name="title"  class="title" id="title"><br>
-
-            <label for="description">Description</label><br>
-            <textarea name="description" id="content" cols="100" rows="10"></textarea><br>
-
-            <label for="blog_picture"></label><br>
-            <input type="file" name="blog_picture" class="file-input"><br>
-
+            <div class="message"></div>
             <div class="button-left"><button class="create-button" id="update-btn">Update</button></div>
+            
 
 
         </form>
