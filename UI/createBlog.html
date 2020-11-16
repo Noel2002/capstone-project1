@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>   
+
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
@@ -40,23 +47,25 @@
    <section id="form-container">
     <div class="form">
        
-        <form action="#" name="create-blog-form" class="form-controls">
+        <form name="create-blog-form" id="form" class="form-controls">
             <div class="form-title">
                 Create blog
             </div>
-            <label for="title">Blog Writer's name</label><br>
-            <input type="text" name="writer"><br>
 
-            <label for="title">Title</label><br>
-            <input type="text" name="title" class="title"><br>
+            <div class="blog-img"><img src="" alt="" class="blog-cover-img"></div>
+            <input type="file" name="blog_picture" class="file-input" id="file-input"><br>
+            <div class="upload-progress"></div>
+            <div class="upload-btn"><button id="upload-btn">Upload</button></div>
+            <input type="text" name="writer" id="writer" placeholder="Writer's name"><br>
 
-            <label for="description">Description</label><br>
-            <textarea name="description" id="" cols="100" rows="10"></textarea><br>
+            <input type="text" name="title" class="title" id="title" placeholder="Blog title"><br>
 
-            <label for="blog_picture"></label><br>
-            <input type="file" name="blog_picture" class="file-input"><br>
-
-            <div class="button-left"><button class="create-button">Create</button></div>
+            <textarea name="description" id="description" cols="100" rows="10" placeholder="Write your blog here"></textarea><br>
+            <div class="blog-message"></div>
+            
+            <div class="message"></div>
+            <div class="button-left"><button class="create-button" id="create-btn">Create</button></div>
+            
 
 
         </form>
@@ -64,13 +73,37 @@
     </div>
    </section>
 
-   <section id="footer">
+   <!--<section id="footer">
     <p>Copyright &copy; 2020 All rights reserved, Nowo Design</p>
-  </section>
+  </section>-->
 
-
+   <script src="../JS/createBlog.js"></script>
    <script src="../JS/nav.js"></script>
 
+    <!--------------------firestore configuration-------------------------->
+ 
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAmWHqnt0a5jWNPe6xaawv0RdKQX8_bQ8",
+      authDomain: "portofolio-test.firebaseapp.com",
+      databaseURL: "https://portofolio-test.firebaseio.com",
+      projectId: "portofolio-test",
+      storageBucket: "portofolio-test.appspot.com",
+      messagingSenderId: "781121740902",
+      appId: "1:781121740902:web:c1d5c83dd78eb3bcbe8da7",
+      measurementId: "G-81094VR4W3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db=firebase.firestore();
+    const fbstorage= firebase.storage();
+    db.settings({ timestampsInSnapshots: true });
+</script>
+     <!-------------------------------------------------------------------->
+     
    
   </body>
   </html> 

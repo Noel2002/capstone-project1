@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+ 
+ 
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
@@ -43,15 +50,14 @@
            <div class="form-title">
                Message
            </div>
-           <form action="#" class="form">
+           <form action="#" class="form" id="form">
                <div class="control">
-                   <label for="username">Username</label><br>
-                   <input type="text" name="username" id="username">
+                   <input type="text" name="username" id="username" placeholder="Enter your name here">
                </div>
                <div class="control">
-                    <label for="username" aria-placeholder="Write username here">Message</label><br>
                     <textarea name="message" id="message" placeholder="Write your message here"></textarea>
                </div>
+               <div class="error green"></div>
                <div class="submit-btn">
                    <button>Send</button>
                </div>
@@ -62,6 +68,30 @@
 
 
    <script src="../JS/nav.js"></script>
+   <script src="../JS/contact.js"></script>
+
+   <!--------------------firestore configuration-------------------------->
+ 
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAmWHqnt0a5jWNPe6xaawv0RdKQX8_bQ8",
+      authDomain: "portofolio-test.firebaseapp.com",
+      databaseURL: "https://portofolio-test.firebaseio.com",
+      projectId: "portofolio-test",
+      storageBucket: "portofolio-test.appspot.com",
+      messagingSenderId: "781121740902",
+      appId: "1:781121740902:web:c1d5c83dd78eb3bcbe8da7",
+      measurementId: "G-81094VR4W3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db=firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+     <!-------------------------------------------------------------------->
 
    
 </body>

@@ -41,17 +41,32 @@ body{
     margin-bottom: 50px;
     font-size: 22px;
 }
-
+.comment-inputs{
+    width: 100%;
+    margin-bottom: 7px;
+}
 .write-comment{
     display: flex;
     align-items: flex-end;
+    flex-direction: column;
 }
-.write-comment textarea{
-    width: 90%;
-    height: 40px;
+
+#sender{
+    width:100%;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 16px;
+    padding: 3px 0px;
+    border: none;
+    border-bottom: 2px solid #852270 !important;
+}
+.comment-inputs textarea{
+    width: 98%;
+    height: 50px;
     padding:5px 8px;
     border-radius: 5px;
     font-size: 17px;
+    border-color: #852270;
 }
 
 .write-comment button{
@@ -64,6 +79,12 @@ body{
     border:none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+.sent-message{
+    width: 100%;
+    text-align: center;
+    color: green;
 }
 
 .users-comments{
