@@ -94,5 +94,8 @@ sendbtn.addEventListener('click', (e)=>{
         blog_id: queryString,
         comment_date: commentTime
     });
+    comSender.value="";
+    com.value="";
+    
     alert('comment sent');
 });
