@@ -21,13 +21,25 @@ function renderBlog(doc){
     title.innerHTML= doc.data().title;
 
 }
-
+/*
 db.collection('comments').where('blog_id','==', queryString).get().then((snap)=>{
     snap.forEach(element => {
         console.log(element.data());
         renderComments(element);
     });
 });
+*/
+
+db.collection('comments').where('blog_id','==', queryString).onSnapshot( snap=>{
+    let changes= snap.docChanges();
+    changes.forEach(change => {
+        console.log(change.doc.data());
+        if(change.type == 'added'){
+            renderComments(change.doc);
+        }
+    });
+})
+
 
 let commentsArea= document.getElementById('users-comments');
 
@@ -96,6 +108,6 @@ sendbtn.addEventListener('click', (e)=>{
     });
     comSender.value="";
     com.value="";
-    
+
     alert('comment sent');
 });
