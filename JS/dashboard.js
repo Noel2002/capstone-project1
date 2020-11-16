@@ -1,5 +1,5 @@
 var pane_item=document.getElementsByClassName("pane-item");
-pane_item[0].style.display="block";
+pane_item[2].style.display="block";
 function display_item(n){
     var menu=document.getElementsByClassName("menu-item");
     for(let i=0; i<menu.length; i++){
@@ -211,3 +211,19 @@ function renderBlogs(doc){
 }
 
 //------------------------------------------------------
+auth.onAuthStateChanged(user =>{
+    if(!user){
+        //alert('logged out successfully');
+        window.location.href="signIn.html";
+    }      
+
+
+
+    
+});
+let logout= document.getElementById('logOut');
+
+logout.addEventListener('click', (e)=>{
+    e.preventDefault();
+    auth.signOut();
+});

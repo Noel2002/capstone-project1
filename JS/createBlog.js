@@ -98,3 +98,21 @@ function validate(){
 function hideMessage(){
     blogMessage.innerHTML="";
 }
+
+//----------------------Authentication--------------------------------
+auth.onAuthStateChanged(user =>{
+    if(!user){
+        //alert('logged out successfully');
+        window.location.href="signIn.html";
+    }      
+
+
+
+    
+});
+let logout= document.getElementById('logOut');
+
+logout.addEventListener('click', (e)=>{
+    e.preventDefault();
+    auth.signOut();
+});
