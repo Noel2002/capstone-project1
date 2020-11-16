@@ -118,7 +118,7 @@ function renderBlogs(doc){
     blogImg.setAttribute('class', 'blog-img');
 
     let coverImg=document.createElement('img');
-    coverImg.setAttribute('src','../images/login4.jpg');
+    coverImg.setAttribute('src',doc.data().imgUrl);
 
     let blogText=document.createElement('div');
     blogText.setAttribute('class','blog-text');
