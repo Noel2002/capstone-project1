@@ -1,5 +1,5 @@
 var pane_item=document.getElementsByClassName("pane-item");
-pane_item[2].style.display="block";
+pane_item[0].style.display="block";
 function display_item(n){
     var menu=document.getElementsByClassName("menu-item");
     for(let i=0; i<menu.length; i++){
