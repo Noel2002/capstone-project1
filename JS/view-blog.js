@@ -94,6 +94,7 @@ function renderComments(doc){
 let comSender= document.getElementById('sender');
 let com= document.getElementById('comment-box');
 let sendbtn= document.getElementById('send-btn');
+let sentMsg= document.querySelector('.sent-message');
 
 sendbtn.addEventListener('click', (e)=>{
     e.preventDefault();
@@ -108,6 +109,11 @@ sendbtn.addEventListener('click', (e)=>{
     });
     comSender.value="";
     com.value="";
-
-    alert('comment sent');
+    sentMsg.innerHTML='Your comment is sent!';
+    setTimeout(hideMsg,3000);
+    //alert('comment sent');
 });
+
+function hideMsg(){
+    sentMsg.innerHTML="";
+}

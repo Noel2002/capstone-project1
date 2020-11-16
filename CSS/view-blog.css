@@ -81,6 +81,12 @@ body{
     cursor: pointer;
 }
 
+.sent-message{
+    width: 100%;
+    text-align: center;
+    color: green;
+}
+
 .users-comments{
     margin-top: 35px;
 }
