@@ -3,11 +3,16 @@ const blogsArea= document.querySelector('.articles-area');
 
 function render(doc){
     let articleLink= document.createElement('a');
-    articleLink.setAttribute('href','view-blog.html');
+    articleLink.setAttribute('href','view-blog.html?'+doc.id);
 
     let article=document.createElement('div');
     article.setAttribute('data-id',doc.id);
     article.setAttribute('class', 'article');
+
+    let blogImg= document.createElement('div');
+    blogImg.setAttribute('class','article-img');
+    let coverImg= document.createElement('img');
+    coverImg.setAttribute('src', doc.data().imgUrl);
 
     let title=document.createElement('div');
     title.setAttribute('class','article-title');
@@ -30,7 +35,9 @@ function render(doc){
     date.textContent= doc.data().blog_date;
     author.textContent= "By "+ doc.data().writer;
     title.textContent= doc.data().title;
-    summary.textContent=doc.data().content;
+    summary.textContent=doc.data().content.slice(0,200)+'...';
+
+    blogImg.appendChild(coverImg);
 
     articleInfo.appendChild(author);
     articleInfo.appendChild(date);
@@ -40,6 +47,7 @@ function render(doc){
     articleText.appendChild(articleInfo);
 
 
+    articleLink.appendChild(blogImg);
     articleLink.appendChild(articleText);
     article.appendChild(articleLink);
 

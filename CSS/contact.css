@@ -43,11 +43,11 @@ a{
 
 .form-container{
     background-color: white;
-    width:30%;
+    width:65%;
     padding:20px 30px;
     position: absolute;
     top: 20%;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .form-title{
     font-size: 20px;
@@ -57,41 +57,58 @@ a{
 }
 
 .control{
-    padding: 10px;
-}
-label{
-    font-size: 15px;
-    font-weight: 600;
+    padding: 10px 0px;
 }
 
+
 input[type="text"], textarea{
-    width: 100%;
+    width: 97%;
     margin-top: 8px;
     border: none;
-    border-radius: 5px;
-    background-color: #f7d7f0;
     padding: 4px 8px;
     font-size: 17px;
+    border: none;
+    outline: none;
 }
 input[type="text"]{
     height: 30px;
+    border-bottom: 1px solid #852270;
+
 }
 textarea{
     height:200px;
+    border-radius: 3px;
+    border: 1px solid #852270;
+
+}
+
+.error{
+    margin-bottom: 8px;
+}
+
+.error.red{
+    color: rgb(241, 6, 6);
+}
+.error.green{
+    color: green;
 }
 
 .submit-btn{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .submit-btn button{
-    padding: 5px 12px;
+    padding: 10px 0px;
     background-color: #852270;
     color: white;
-    border-radius: 10px;
+    border-radius: 3px;
     border: none;
+    width: 100%;
+    margin-top: 7px;
+    font-size: 16px;
 }
 
 

@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" typetype="text/css" href="../CSS/nav.css">
@@ -154,62 +161,7 @@
                 </div>
                 <div class="pane-item-content">
                     <div class="users-messages">
-                        <div class="message">
-                            <div class="writer-avatar">
-                                <img src="../images/login2.jpg" alt="">
-                            </div>
-                            <div class="message-body">
-                                <div class="writer-name">
-                                    Berwa Noel
-                                </div>
-                                <div class="message-content">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Natus dignissimos eum, possimus reiciendis hic suscipit!
-                                </div>
-                                <div class="message-date">
-                                    Jun 20, 2020
-                                </div>
-                            </div>
-                        </div>
-                        <div class="message">
-                         <div class="writer-avatar">
-                             <img src="../images/login2.jpg" alt="">
-                         </div>
-                         <div class="message-body">
-                             <div class="writer-name">
-                                 Berwa Noel
-                             </div>
-                             <div class="message-content">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel atque, 
-                                id possimus quibusdam et asperiores itaque voluptatum, unde quasi 
-                                eligendi aut dolor doloremque eius cum sed quis dolorem facere aperiam? 
-                                Quae explicabo tenetur nemo accusamus iste optio incidunt illum quasi alias 
-                                consequuntur, dicta quis temporibus, 
-                                quia deserunt asperiores libero doloremque?
-                             </div>
-                             <div class="message-date">
-                                 Jun 20, 2020
-                             </div>                             
-                         </div>
-                        </div>
-                        <div class="message">
-                            <div class="writer-avatar">
-                                <img src="../images/login2.jpg" alt="">
-                            </div>
-                            <div class="message-body">
-                                <div class="writer-name">
-                                    Berwa Noel
-                                </div>
-                                <div class="message-content">
-                                   Lorem ipsum dolor sit amet consectetur 
-                                   adipisicing elit. Est accusantium 
-                                   veritatis cumque modi. Nemo, vitae!
-                                </div>
-                                <div class="message-date">
-                                    Jun 20, 2020
-                                </div>                             
-                            </div>
-                           </div>
+                        
                     </div>
                 </div>
             </div>
@@ -219,165 +171,8 @@
                 <div class="pane-item-title">
                     Blogs
                 </div>
-                <div class="pane-item-content">
-                    <div class="blogs-area">
-
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="../images/login2.jpg" alt="">
-                            </div>
-                            <div class="blog-text">
-                                <div class="blog-title">
-                                    Life without computers in daily life
-                                </div>
-                                
-                                <div class="blog-info">
-                                    <div class="blog-author">
-                                        By B. Noel
-                                    </div>
-                                    <div class="blog-date">
-                                        Feb 21, 2020
-                                    </div>
-                                </div>
-                                <div class="blog-btns">
-                                    <button class="view-btn">View</button>
-                                    <button class="edit-btn">Edit</button>
-                                    <button class="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="../images/login3.jpg" alt="">
-                            </div>
-                            <div class="blog-text">
-                                <div class="blog-title">
-                                    5 ways to increase your typing speed
-                                </div>
-                                
-                                <div class="blog-info">
-                                    <div class="blog-author">
-                                        By B. Noel
-                                    </div>
-                                    <div class="blog-date">
-                                        Feb 21, 2020
-                                    </div>
-                                </div>
-                                <div class="blog-btns">
-                                    <button class="view-btn">View</button>
-                                    <button class="edit-btn">Edit</button>
-                                    <button class="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="blogs-area">
-
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="../images/login2.jpg" alt="">
-                            </div>
-                            <div class="blog-text">
-                                <div class="blog-title">
-                                    Life without computers in daily life
-                                </div>
-                                
-                                <div class="blog-info">
-                                    <div class="blog-author">
-                                        By B. Noel
-                                    </div>
-                                    <div class="blog-date">
-                                        Feb 21, 2020
-                                    </div>
-                                </div>
-                                <div class="blog-btns">
-                                    <button class="view-btn">View</button>
-                                    <button class="edit-btn">Edit</button>
-                                    <button class="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="../images/login3.jpg" alt="">
-                            </div>
-                            <div class="blog-text">
-                                <div class="blog-title">
-                                    5 ways to increase your typing speed
-                                </div>
-                                
-                                <div class="blog-info">
-                                    <div class="blog-author">
-                                        By B. Noel
-                                    </div>
-                                    <div class="blog-date">
-                                        Feb 21, 2020
-                                    </div>
-                                </div>
-                                <div class="blog-btns">
-                                    <button class="view-btn">View</button>
-                                    <button class="edit-btn">Edit</button>
-                                    <button class="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div class="blogs-area">
-
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="../images/login2.jpg" alt="">
-                            </div>
-                            <div class="blog-text">
-                                <div class="blog-title">
-                                    Life without computers in daily life
-                                </div>
-                                
-                                <div class="blog-info">
-                                    <div class="blog-author">
-                                        By B. Noel
-                                    </div>
-                                    <div class="blog-date">
-                                        Feb 21, 2020
-                                    </div>
-                                </div>
-                                <div class="blog-btns">
-                                    <button class="view-btn">View</button>
-                                    <button class="edit-btn">Edit</button>
-                                    <button class="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog">
-                            <div class="blog-img">
-                                <img src="../images/login3.jpg" alt="">
-                            </div>
-                            <div class="blog-text">
-                                <div class="blog-title">
-                                    5 ways to increase your typing speed
-                                </div>
-                                
-                                <div class="blog-info">
-                                    <div class="blog-author">
-                                        By B. Noel
-                                    </div>
-                                    <div class="blog-date">
-                                        Feb 21, 2020
-                                    </div>
-                                </div>
-                                <div class="blog-btns">
-                                    <button class="view-btn">View</button>
-                                    <button class="edit-btn">Edit</button>
-                                    <button class="delete-btn">Delete</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+                <div class="pane-item-content" id="blogs-area">
+                                        
                 </div>
             </div>
 
@@ -458,11 +253,33 @@
 
         </div>
    </section>
-
    
 
-
    <script src="../JS/nav.js"></script>
-   <script src="../JS/dashboard.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBAmWHqnt0a5jWNPe6xaawv0RdKQX8_bQ8",
+    authDomain: "portofolio-test.firebaseapp.com",
+    databaseURL: "https://portofolio-test.firebaseio.com",
+    projectId: "portofolio-test",
+    storageBucket: "portofolio-test.appspot.com",
+    messagingSenderId: "781121740902",
+    appId: "1:781121740902:web:c1d5c83dd78eb3bcbe8da7",
+    measurementId: "G-81094VR4W3"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db=firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+
+
+</script>
+
+<script src="../JS/dashboard.js"></script>
+
   </body>
   </html> 
